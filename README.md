@@ -34,7 +34,7 @@ This project aims to predict real estate prices using **XGBoost Regressor**. The
 1. Load the dataset and preprocess it.
 2. Train the model using **XGBRegressor**.
 3. Use the trained model to predict prices for new inputs.
-4. Display the result in a readable format.
+4. Display the result in a readable format.  
 
 ## Dependencies
 - Python 3.x
