@@ -43,7 +43,7 @@ Export: Saved trained model as model.pkl and columns as columns_list.pkl.
 
 Clone this repository:
 
-git clone https://github.com/your-username/real-estate-predictor.git
+git clone https://github.com/akarshCpp/real-estate-predictor.git
 cd real-estate-predictor
 
 
