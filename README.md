@@ -1,51 +1,88 @@
-# Real Estate Price Prediction
+🏠 Real Estate Price Prediction using XGBoost
+📘 Overview
 
-## Overview
-This project aims to predict real estate prices using **XGBoost Regressor**. The model is trained on various property features such as **area, number of bedrooms (BHK), number of bathrooms, and square footage (int_sqft)**. The goal is to provide accurate price estimates based on these parameters.
+This project predicts property prices based on key features such as area, square footage, number of bathrooms, and BHK. Using XGBoost Regressor, the model achieves high accuracy and provides reliable price predictions. A simple Streamlit web app allows users to interact with the model and get instant predictions.
 
-## Features Used
-- **area**: Location of the property
-- **int_sqft**: Interior square footage of the property
-- **n_bathroom**: Number of bathrooms
-- **bhk**: Number of bedrooms, halls, and kitchens
+🎯 Objectives
 
-## Data Preprocessing
-- **Feature Engineering**: Selected important features for training.
-- **Data Cleaning**: Removed missing or inconsistent values.
-- **Outlier Detection**: Identified and removed extreme values.
-- **One-Hot Encoding**: Converted categorical variables into numerical representations.
-- **Scaling**: Applied **Min-Max Scaling** and **Standard Scaling** for better model performance.
+Build a predictive model that estimates real estate prices.
 
-## Model Details
-- Model Used: **XGBRegressor**
-- Parameters:
-  - `learning_rate=0.7`
-  - `n_estimators=100`
-  - `verbosity=0`
-- Achieved **R² Score: 0.99**
+Use feature engineering and scaling to improve accuracy.
 
-## Prediction Output Format
-- The model predicts the property price and formats the output with commas for better readability.
-- Example:
-  - **Input:** `area='Velachery', int_sqft=1200, n_bathroom=2, bhk=3`
-  - **Output:** `Predicted Price: 7,500,000`
+Compare multiple ML algorithms and finalize the best one.
 
-## How to Use
-1. Load the dataset and preprocess it.
-2. Train the model using **XGBRegressor**.
-3. Use the trained model to predict prices for new inputs.
-4. Display the result in a readable format.  
+Deploy the model using an interactive Streamlit interface.
 
-## Dependencies
-- Python 3.x
-- pandas
-- numpy
-- scikit-learn
-- xgboost
-- matplotlib (for data visualization)
+💡 Key Features
 
-## Future Improvements
-- Adding more features like **age of the building, amenities, and proximity to landmarks**.
-- Implementing a **web interface** for user-friendly price predictions.
-- Deploying the model as an **API**.
+Supports multiple Chennai areas: Anna Nagar, T Nagar, Velachery, Chrompet, Karapakkam, KK Nagar, Adyar.
+
+Model trained with XGBoost Regressor for best performance.
+
+Input scaling using MinMaxScaler and StandardScaler.
+
+Outputs predictions in Indian Rupee format (e.g., ₹5,67,890).
+
+Includes .pkl files for easy model loading in the app.
+
+🧠 Machine Learning Workflow
+
+Data Cleaning: Removed missing and irrelevant data.
+
+Feature Engineering: Converted categorical data to numeric (One-Hot Encoding).
+
+Scaling: Applied Min-Max and Standard Scalers.
+
+Model Selection: Compared Linear, Ridge, Lasso, RandomForest, and XGBoost.
+
+Model Building: Finalized XGBoost Regressor with an R² score of 0.99.
+
+Export: Saved trained model as model.pkl and columns as columns_list.pkl.
+
+⚙️ Installation & Setup
+
+Clone this repository:
+
+git clone https://github.com/your-username/real-estate-predictor.git
+cd real-estate-predictor
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run the Streamlit app:
+
+streamlit run app.py
+
+🧩 Files in the Project
+File Name	Description
+app.py	Streamlit web application
+model.pkl	Trained XGBoost model
+columns_list.pkl	Feature list used during training
+requirements.txt	Python dependencies
+README.md	Project documentation
+data.csv	Dataset used for model training (optional)
+🧪 Example Prediction
+Area	Int Sqft	Bathrooms	BHK	Predicted Price
+Anna Nagar	1000	2	2	₹56,78,907
+T Nagar	1200	1	1	₹45,32,100
+📊 Results
+
+✅ Best Model: XGBoost Regressor
+
+✅ R² Score: 0.99
+
+✅ MAE: Very Low
+
+✅ RMSE: Optimized
+
+🚀 Future Enhancements
+
+Add more features like furnishing, floor, and age of the property.
+
+Integrate a map-based UI for area selection.
+
+Use live data for dynamic price updates.
 
